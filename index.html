@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --bg: #0a0a0c;
       --surface: #111116;
@@ -20,9 +20,9 @@
       --mono: 'Space Mono', monospace;
       --sans: 'Syne', sans-serif;
     }
-
+ 
     html { scroll-behavior: smooth; }
-
+ 
     body {
       background: var(--bg);
       color: var(--text);
@@ -30,7 +30,7 @@
       overflow-x: hidden;
       cursor: none;
     }
-
+ 
     /* Custom cursor */
     .cursor {
       width: 10px; height: 10px;
@@ -49,12 +49,12 @@
       transform: translate(-50%, -50%);
       opacity: 0.5;
     }
-
+ 
     /* Scrollbar */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
-
+ 
     /* Nav */
     nav {
       position: fixed; top: 0; width: 100%; z-index: 100;
@@ -82,7 +82,7 @@
       text-transform: uppercase;
     }
     .nav-links a:hover { color: var(--accent); }
-
+ 
     /* Hero */
     #hero {
       min-height: 100vh;
@@ -91,7 +91,7 @@
       position: relative;
       overflow: hidden;
     }
-
+ 
     .hero-grid-bg {
       position: absolute; inset: 0; pointer-events: none;
       background-image:
@@ -101,7 +101,7 @@
       mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 80%);
       opacity: 0.35;
     }
-
+ 
     .hero-glow {
       position: absolute;
       width: 600px; height: 600px;
@@ -118,14 +118,14 @@
       pointer-events: none;
       animation: glowPulse 8s ease-in-out infinite reverse;
     }
-
+ 
     @keyframes glowPulse {
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.6; transform: scale(1.1); }
     }
-
+ 
     .hero-content { max-width: 900px; position: relative; z-index: 2; }
-
+ 
     .hero-tag {
       font-family: var(--mono);
       font-size: 0.75rem;
@@ -136,7 +136,7 @@
       opacity: 0;
       animation: fadeUp 0.8s 0.2s forwards;
     }
-
+ 
     h1.hero-name {
       font-size: clamp(3.5rem, 8vw, 7rem);
       font-weight: 800;
@@ -146,9 +146,9 @@
       opacity: 0;
       animation: fadeUp 0.8s 0.4s forwards;
     }
-
+ 
     h1.hero-name .name-accent { color: var(--accent); }
-
+ 
     .hero-title {
       font-family: var(--mono);
       font-size: clamp(1rem, 2vw, 1.4rem);
@@ -157,9 +157,9 @@
       opacity: 0;
       animation: fadeUp 0.8s 0.6s forwards;
     }
-
+ 
     .hero-title .hl { color: var(--text); }
-
+ 
     .hero-desc {
       font-size: 1.05rem;
       color: var(--muted);
@@ -169,13 +169,13 @@
       opacity: 0;
       animation: fadeUp 0.8s 0.8s forwards;
     }
-
+ 
     .hero-ctas {
       display: flex; gap: 1rem; flex-wrap: wrap;
       opacity: 0;
       animation: fadeUp 0.8s 1s forwards;
     }
-
+ 
     .btn {
       font-family: var(--mono);
       font-size: 0.78rem;
@@ -206,7 +206,7 @@
       border-color: var(--accent);
       color: var(--accent);
     }
-
+ 
     .hero-stats {
       position: absolute; right: 3rem; top: 50%;
       transform: translateY(-50%);
@@ -228,7 +228,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
-
+ 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
@@ -237,7 +237,7 @@
       from { opacity: 0; transform: translateY(-50%) translateX(24px); }
       to { opacity: 1; transform: translateY(-50%) translateX(0); }
     }
-
+ 
     /* Section base */
     section { padding: 6rem 3rem; }
     .section-label {
@@ -255,7 +255,7 @@
       margin-bottom: 3rem;
       line-height: 1.1;
     }
-
+ 
     /* ── Skills Ticker ── */
     .ticker-wrap {
       overflow: hidden;
@@ -279,7 +279,7 @@
     }
     .ticker-item span { color: var(--accent); margin-right: 0.5rem; }
     @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
+ 
     /* ── About ── */
     #about { background: var(--surface); }
     .about-grid {
@@ -317,7 +317,7 @@
       margin-bottom: 0.4rem;
     }
     .about-card p { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
-
+ 
     /* ── Experience ── */
     #experience { max-width: 900px; margin: 0 auto; }
     .exp-list { display: flex; flex-direction: column; gap: 0; }
@@ -377,7 +377,7 @@
       font-size: 0.7rem;
       top: 0.25rem;
     }
-
+ 
     /* ── Projects ── */
     #projects { background: var(--surface); }
     .projects-grid {
@@ -406,7 +406,7 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
     .project-card:hover::after { opacity: 1; }
-
+ 
     .project-num {
       font-family: var(--mono);
       font-size: 0.65rem;
@@ -439,7 +439,7 @@
       transition: border-color 0.2s, color 0.2s;
     }
     .project-card:hover .tag { border-color: rgba(0,229,192,0.3); color: var(--accent); }
-
+ 
     /* ── Skills ── */
     #skills { background: var(--bg); }
     .skills-outer { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
@@ -471,7 +471,7 @@
       transition: background 0.2s, color 0.2s;
     }
     .skill-group:hover .skill-pill { border-color: rgba(123,94,167,0.4); }
-
+ 
     /* ── Contact ── */
     #contact {
       background: var(--surface);
@@ -508,7 +508,7 @@
       transition: color 0.2s, border-color 0.2s;
     }
     .contact-link:hover { color: var(--accent); border-color: var(--accent); }
-
+ 
     .contact-email {
       font-size: clamp(1.5rem, 4vw, 2.5rem);
       font-weight: 800;
@@ -519,7 +519,7 @@
       transition: color 0.2s;
     }
     .contact-email:hover { color: var(--accent); }
-
+ 
     /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
@@ -534,7 +534,7 @@
       color: var(--muted);
       letter-spacing: 0.08em;
     }
-
+ 
     /* Scroll reveal */
     .reveal {
       opacity: 0;
@@ -545,7 +545,7 @@
       opacity: 1;
       transform: translateY(0);
     }
-
+ 
     @media (max-width: 768px) {
       nav { padding: 1rem 1.25rem; }
       .nav-links { display: none; }
@@ -561,10 +561,10 @@
   </style>
 </head>
 <body>
-
+ 
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
-
+ 
   <!-- NAV -->
   <nav>
     <a href="#hero" class="nav-logo">RD.dev</a>
@@ -576,7 +576,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
+ 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-grid-bg"></div>
@@ -612,7 +612,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- SKILLS TICKER -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
@@ -647,7 +647,7 @@
       <span class="ticker-item"><span>▸</span>Microservices</span>
     </div>
   </div>
-
+ 
   <!-- ABOUT -->
   <section id="about">
     <div class="about-grid reveal">
@@ -682,13 +682,13 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- EXPERIENCE -->
   <section id="experience">
     <p class="section-label reveal">// 02 Experience</p>
     <h2 class="section-title reveal">Where I've<br/>shipped.</h2>
     <div class="exp-list">
-
+ 
       <div class="exp-item reveal">
         <div class="exp-meta">
           <span class="exp-date">Nov 2025 – Present</span>
@@ -705,7 +705,7 @@
           </ul>
         </div>
       </div>
-
+ 
       <div class="exp-item reveal">
         <div class="exp-meta">
           <span class="exp-date">Jan 2025 – Jun 2025</span>
@@ -722,7 +722,7 @@
           </ul>
         </div>
       </div>
-
+ 
       <div class="exp-item reveal">
         <div class="exp-meta">
           <span class="exp-date">Feb 2023 – Jul 2023</span>
@@ -737,16 +737,16 @@
           </ul>
         </div>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <!-- PROJECTS -->
   <section id="projects">
     <p class="section-label reveal">// 03 Projects</p>
     <h2 class="section-title reveal">Things I've<br/>built.</h2>
     <div class="projects-grid">
-
+ 
       <div class="project-card reveal">
         <span class="project-num">PROJECT — 01</span>
         <h3>AI-Powered Personalized Learning Platform</h3>
@@ -762,7 +762,7 @@
           <span class="tag">Docker</span>
         </div>
       </div>
-
+ 
       <div class="project-card reveal">
         <span class="project-num">PROJECT — 02</span>
         <h3>Chronic Disease Prediction with ML</h3>
@@ -777,16 +777,16 @@
           <span class="tag">SQL</span>
         </div>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <!-- SKILLS -->
   <section id="skills">
     <p class="section-label reveal">// 04 Skills</p>
     <h2 class="section-title reveal">The stack.</h2>
     <div class="skills-outer">
-
+ 
       <div class="skill-group reveal">
         <p class="skill-group-title">Languages</p>
         <div class="skill-pills">
@@ -799,7 +799,7 @@
           <span class="skill-pill">R</span>
         </div>
       </div>
-
+ 
       <div class="skill-group reveal">
         <p class="skill-group-title">AWS &amp; Cloud</p>
         <div class="skill-pills">
@@ -818,7 +818,7 @@
           <span class="skill-pill">Azure</span>
         </div>
       </div>
-
+ 
       <div class="skill-group reveal">
         <p class="skill-group-title">Backend &amp; APIs</p>
         <div class="skill-pills">
@@ -833,7 +833,7 @@
           <span class="skill-pill">MongoDB</span>
         </div>
       </div>
-
+ 
       <div class="skill-group reveal">
         <p class="skill-group-title">Frontend &amp; DevOps</p>
         <div class="skill-pills">
@@ -847,10 +847,10 @@
           <span class="skill-pill">Agile</span>
         </div>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <!-- CONTACT -->
   <section id="contact">
     <div class="contact-inner reveal">
@@ -866,13 +866,13 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- FOOTER -->
   <footer>
     <span>© 2025 Rohitha Dollu</span>
     <span>Designed &amp; built from scratch.</span>
   </footer>
-
+ 
   <script>
     // Custom cursor
     const cursor = document.getElementById('cursor');
@@ -895,7 +895,7 @@
         ring.style.opacity = '0.5';
       });
     });
-
+ 
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver((entries) => {
